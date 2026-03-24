@@ -27,6 +27,17 @@ from utils import *
 
 bot = Client("bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
+def run_bot():
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+
+    async def main():
+        await bot.start()
+        start_workers()
+        await asyncio.Event().wait()  # mantiene el bot vivo
+
+    loop.run_until_complete(main())
+
 # START
 @bot.on_message(filters.command("start"))
 async def start(client, message):
