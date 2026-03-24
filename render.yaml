@@ -1,6 +1,9 @@
 services:
-  - type: worker
-    name: bot-pro
-    runtime: python
-    buildCommand: pip install -r requirements.txt
+  - type: web
+    name: bot-archive
+    env: python3
+    buildCommand: pip install -r requisitos.txt
     startCommand: python3 app.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
