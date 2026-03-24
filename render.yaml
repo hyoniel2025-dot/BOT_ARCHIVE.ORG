@@ -1,7 +1,7 @@
 services:
   - type: web
     name: bot-archive
-    env: python3
+    env: python
     buildCommand: pip install -r requisitos.txt
     startCommand: python3 app.py
     envVars:
