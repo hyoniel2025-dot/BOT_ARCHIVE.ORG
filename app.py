@@ -1,4 +1,3 @@
-
 from flask import Flask
 import threading
 import os
@@ -25,22 +24,6 @@ from compressor import compress_and_split
 from uploader import upload_file
 from queue_manager import queue, start_workers
 from utils import *
-
-from flask import Flask
-import threading
-import os
-
-app = Flask(__name__)
-
-@app.route("/")
-def home():
-    return "Bot activo ✅"
-
-def run_web():
-    port = int(os.environ.get("PORT", 10000))
-    app.run(host="0.0.0.0", port=port)
-
-threading.Thread(target=run_web).start()
 
 bot = Client("bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
