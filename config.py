@@ -1,0 +1,14 @@
+import os
+
+API_ID = int(os.getenv("API_ID"))
+API_HASH = os.getenv("API_HASH")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+
+ARCHIVE_ACCESS_KEY = os.getenv("ARCHIVE_ACCESS_KEY")
+ARCHIVE_SECRET_KEY = os.getenv("ARCHIVE_SECRET_KEY")
+
+ADMIN_USERNAME = "User_Progaming"
+
+CHUNK_SIZE = 1024 * 1024
+VOLUME_SIZE = 100 * 1024 * 1024
+MAX_RETRIES = 3
