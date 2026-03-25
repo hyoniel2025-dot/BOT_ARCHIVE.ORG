@@ -1,9 +1,7 @@
 services:
   - type: web
     name: bot-archive
-    env: python
+    env: python3
+    runtime: python-3.11.9
     buildCommand: pip install -r requisitos.txt
     startCommand: python3 app.py
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.11.9
